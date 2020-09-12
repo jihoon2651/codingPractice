@@ -15,7 +15,7 @@ public class Five {
 
         double eat = 0;
         int price = 0;
-        int amount = 0;
+        int orderAmount = 0;
 
         for (int i = 0; i < history.length; i++) {
             eat = Double.parseDouble(history[i]);
@@ -27,14 +27,14 @@ public class Five {
                     stock.setPorkFeet((int)(stock.getPorkFeet()-4*eat));
                 }else{
                     if((int)((4 * eat - stock.getPorkFeet())) % 10 == 0){
-                        amount = (int)((4 * eat - stock.getPorkFeet())/10);
-                        price += 10000*amount;
-                        stock.setPorkFeet((int) ((stock.getPorkFeet()+10*amount)
+                        orderAmount = (int)((4 * eat - stock.getPorkFeet())/10);
+                        price += 10000*orderAmount;
+                        stock.setPorkFeet((int) ((stock.getPorkFeet()+10*orderAmount)
                                 - 4 * eat));
                     }else{
-                        amount = (int)((4 * eat - stock.getPorkFeet())/10)+1;
-                        price += 10000*amount;
-                        stock.setPorkFeet((int) ((stock.getPorkFeet()+10*amount)
+                        orderAmount = (int)((4 * eat - stock.getPorkFeet())/10)+1;
+                        price += 10000*orderAmount;
+                        stock.setPorkFeet((int) ((stock.getPorkFeet()+10*orderAmount)
                                 - 4 * eat));
                     }
 
@@ -44,14 +44,14 @@ public class Five {
                     stock.setOnion((int)(stock.getOnion()-50*eat));
                 }else{
                     if((int)((50 * eat - stock.getOnion())) % 100 == 0){
-                        amount = (int)((50 * eat - stock.getOnion())/100);
-                        price += 3000*amount;
-                        stock.setOnion((int) ((stock.getOnion()+100*amount)
+                        orderAmount = (int)((50 * eat - stock.getOnion())/100);
+                        price += 3000*orderAmount;
+                        stock.setOnion((int) ((stock.getOnion()+100*orderAmount)
                                 - 50 * eat));
                     }else{
-                        amount = (int)((50 * eat - stock.getOnion())/100)+1;
-                        price += 3000*amount;
-                        stock.setOnion((int) ((stock.getOnion()+100*amount)
+                        orderAmount = (int)((50 * eat - stock.getOnion())/100)+1;
+                        price += 3000*orderAmount;
+                        stock.setOnion((int) ((stock.getOnion()+100*orderAmount)
                                 - 50 * eat));
                     }
 
@@ -61,14 +61,14 @@ public class Five {
                     stock.setGreenOnion((int)(stock.getGreenOnion()-10*eat));
                 }else{
                     if((int)((10 * eat - stock.getGreenOnion())) % 30 == 0){
-                        amount = (int)((10 * eat - stock.getGreenOnion())/30);
-                        price += 1000*amount;
-                        stock.setGreenOnion((int) ((stock.getGreenOnion()+30*amount)
+                        orderAmount = (int)((10 * eat - stock.getGreenOnion())/30);
+                        price += 1000*orderAmount;
+                        stock.setGreenOnion((int) ((stock.getGreenOnion()+30*orderAmount)
                                 - 10 * eat));
                     }else{
-                        amount = (int)((10 * eat - stock.getGreenOnion())/30)+1;
-                        price += 1000*amount;
-                        stock.setGreenOnion((int) ((stock.getGreenOnion()+30*amount)
+                        orderAmount = (int)((10 * eat - stock.getGreenOnion())/30)+1;
+                        price += 1000*orderAmount;
+                        stock.setGreenOnion((int) ((stock.getGreenOnion()+30*orderAmount)
                                 - 10 * eat));
                     }
                 }
@@ -77,14 +77,14 @@ public class Five {
                     stock.setGarlic((int)(stock.getGarlic()-10*eat));
                 }else{
                     if( (int)((10 * eat - stock.getGarlic())) % 50 == 0){
-                        amount = (int)((10 * eat - stock.getGarlic())/50);
-                        price += 2000*amount;
-                        stock.setGarlic((int) ((stock.getGarlic()+50*amount)
+                        orderAmount = (int)((10 * eat - stock.getGarlic())/50);
+                        price += 2000*orderAmount;
+                        stock.setGarlic((int) ((stock.getGarlic()+50*orderAmount)
                                 - 10 * eat));
                     }else{
-                        amount = (int)((10 * eat - stock.getGarlic())/50)+1;
-                        price += 2000*amount;
-                        stock.setGarlic((int) ((stock.getGarlic()+50*amount)
+                        orderAmount = (int)((10 * eat - stock.getGarlic())/50)+1;
+                        price += 2000*orderAmount;
+                        stock.setGarlic((int) ((stock.getGarlic()+50*orderAmount)
                                 - 10 * eat));
                     }
 
@@ -95,14 +95,14 @@ public class Five {
                         stock.setPepper((int)(stock.getPepper() - 2*eat));
                     }else{
                         if((int)((4 * eat - stock.getPepper())) % 10 == 0){
-                            amount = (int)((4 * eat - stock.getPepper())/10);
-                            price += 1000*amount;
-                            stock.setPepper((int) ((stock.getPepper()+10*amount)
+                            orderAmount = (int)((4 * eat - stock.getPepper())/10);
+                            price += 1000*orderAmount;
+                            stock.setPepper((int) ((stock.getPepper()+10*orderAmount)
                                     - 2 * eat));
                         }else{
-                            amount = (int)((4 * eat - stock.getPepper())/10)+1;
-                            price += 1000*amount;
-                            stock.setPepper((int) ((stock.getPepper()+10*amount)
+                            orderAmount = (int)((4 * eat - stock.getPepper())/10)+1;
+                            price += 1000*orderAmount;
+                            stock.setPepper((int) ((stock.getPepper()+10*orderAmount)
                                     - 2 * eat));
                         }
 
@@ -112,14 +112,14 @@ public class Five {
                         stock.setPepper((int)(stock.getPepper() - 4*eat));
                     }else{
                         if((int)((4 * eat - stock.getPepper())) % 10 == 0){
-                            amount = (int)((4 * eat - stock.getPepper())/10);
-                            price += 1000*amount;
-                            stock.setPepper((int) ((stock.getPepper()+10*amount)
+                            orderAmount = (int)((4 * eat - stock.getPepper())/10);
+                            price += 1000*orderAmount;
+                            stock.setPepper((int) ((stock.getPepper()+10*orderAmount)
                                     - 4 * eat));
                         }else{
-                            amount = (int)((4 * eat - stock.getPepper())/10)+1;
-                            price += 1000*amount;
-                            stock.setPepper((int) ((stock.getPepper()+10*amount)
+                            orderAmount = (int)((4 * eat - stock.getPepper())/10)+1;
+                            price += 1000*orderAmount;
+                            stock.setPepper((int) ((stock.getPepper()+10*orderAmount)
                                     - 4 * eat));
                         }
                     }
